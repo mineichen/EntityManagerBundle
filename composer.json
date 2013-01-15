@@ -1,0 +1,33 @@
+{
+    "name": "mineichen/entity-manager-bundle",
+    "minimum-stability": "dev",
+    "description": "Integrates 'mineichen/entity-manager' into Symfony 2.1",
+    "keywords": ["pubsup", "entityManager", "proxy", "entity", "Symfony", "2.1"],
+    "homepage": "https://github.com/mineichen/EntityManager",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Markus Ineichen",
+            "email": "markus.ineichen@gmx.ch"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/mineichen/EntityManager"
+        }
+    ],
+    "require": {
+        "mineich/entity-manager": "0.0.4"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "files": ["autoload.php"]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.1-dev"
+        }
+    }
+}
