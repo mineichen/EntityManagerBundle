@@ -10,13 +10,13 @@ class RepositoryCompilerPass implements CompilerPassInterface
 {
     public function process(ContainerBuilder $container)
     {
-        if (false === $container->hasDefinition('mineichen_EntityManager')) {
+        if (false === $container->hasDefinition('mineichen_EntityManager_Manager')) {
             return;
         }
 
-        $definition = $container->getDefinition('mineichen_EntityManager');
+        $definition = $container->getDefinition('mineichen_EntityManager_Manager');
 
-        foreach ($container->findTaggedServiceIds('mineichen_repository') as $id => $attributes) {
+        foreach ($container->findTaggedServiceIds('mineichen_EntityManager_repository') as $id => $attributes) {
             $definition->addMethodCall('addRepository', array(new Reference($id)));
         }
 

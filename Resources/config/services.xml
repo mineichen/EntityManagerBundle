@@ -11,7 +11,7 @@
     </parameters>
 
     <services>
-        <service id="mineichen_repositoryFactory"
+        <service id="mineichen_EntityManager_RepositoryFactory"
                  class="%mineichen_EntityManager_RepositoryFactory.class%" />
 
         <service id="mineichen_EntityManager_Manager"
