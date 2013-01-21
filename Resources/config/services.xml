@@ -5,16 +5,20 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
-        <parameter key="mineichen_EntityManager.class">mineichen\entityManager\EntityManager</parameter>
-        <parameter key="mineichen_EntityManagerFactory.class">mineichen\entityManager\ManagerFactory</parameter>
+        <parameter key="mineichen_EntityManager_Manager.class">mineichen\entityManager\EntityManager</parameter>
+        <parameter key="mineichen_EntityManager_RepositoryFactory.class">mineichen\entityManager\RepositoryFactory</parameter>
+        <parameter key="mineichen_EntityManager_Complementer.class">mineichen\entityManager\proxy\RawDataComplementer</parameter>
     </parameters>
 
     <services>
-        <service id="mineichen_entitymanagerfactory"
-                 class="%mineichen_EntityManagerFactory.class%" />
+        <service id="mineichen_repositoryFactory"
+                 class="%mineichen_EntityManager_RepositoryFactory.class%" />
 
-        <service id="mineichen_EntityManager"
-                 class="%mineichen_EntityManager.class%" />
+        <service id="mineichen_EntityManager_Manager"
+                 class="%mineichen_EntityManager_Manager.class%" />
+
+        <service id="mineichen_EntityManager_Complementer"
+                 class="%mineichen_EntityManager_Complementer.class%" />
 
     </services>
 </container>
