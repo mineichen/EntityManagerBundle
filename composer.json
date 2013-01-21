@@ -19,7 +19,7 @@
         }
     ],
     "require": {
-        "mineichen/entity-manager": "0.0.4"
+        "mineichen/entity-manager": "0.1.0"
     },
     "minimum-stability": "dev",
     "autoload": {
